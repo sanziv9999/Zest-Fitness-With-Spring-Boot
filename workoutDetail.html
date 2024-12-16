@@ -7,8 +7,8 @@
     <meta name="keywords" content="Gym, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zest Fitness</title>
-
+    <title>Zest Fitness - Workouts</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
@@ -23,21 +23,25 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
-        #searchBar {
-            width: 100%;
-            max-width: 500px;
-            padding: 10px 15px;
-            margin: 20px 0;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .workout-detail-container {
+            padding: 20px;
         }
 
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .workout-detail-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .workout-description ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .workout-detail-container {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -150,7 +154,7 @@
                         <div class="col-lg-6 offset-lg-6">
                             <div class="hi-text">
                                 <span>Shape your body</span>
-                                <h1><strong>Video Tutorials</strong></h1>
+                                <h1><strong>Workout Detail</strong></h1>
                             </div>
                         </div>
                     </div>
@@ -162,8 +166,7 @@
                         <div class="col-lg-6 offset-lg-6">
                             <div class="hi-text">
                                 <span>Shape your body</span>
-                                <h1>Be <strong>strong</strong> traning hard</h1>
-                                <a href="#" class="primary-btn">Get info</a>
+                                <h1><strong>Workouts</strong></h1>
                             </div>
                         </div>
                     </div>
@@ -173,49 +176,41 @@
     </section>
     <!-- Hero Section End -->
 
-    <!-- Video Tutorial Section Begin -->
-    <section class="video-tutorial-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>Learn with us</span>
-                        <h2 style="color: black;">VIDEO TUTORIAL</h2>
-                    </div>
-                </div>
+<!-- Workout Detail Section Begin -->
+<section class="workout-detail-section spad">
+    <div class="container">
+        <div class="row workout-detail-container">
+            <div class="col-lg-6">
+                <img src="https://www.ritfitsports.com/cdn/shop/articles/how-to-do-full-body-workouts-with-home-workout-bench-comprehensive-guide-by-ritfit-975533.jpg?v=1638269681&width=1500"
+                    alt="Full Body Workout" class="img-fluid" style="max-width: 70%; height: auto;">
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form onsubmit="return false;">
-                        <input type="text" id="searchBar" placeholder="Search for videos..." onkeyup="filterVideos()">
-                    </form>
-                </div>
-            </div>
-            <div class="row" id="videoContainer">
-                <div class="col-md-4 video-item">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/Z_dgrjRlD_4" frameborder="0"
-                        allowfullscreen></iframe>
-                    <h3>Female Abs Workout Tutorial</h3>
-                </div>
-                <div class="col-md-4 video-item">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/z0eulElSJK0" frameborder="0"
-                        allowfullscreen></iframe>
-                    <h3>Female Biceps Workout Tutorial</h3>
-                </div>
-                <div class="col-md-4 video-item">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/FJA3R7n_594" frameborder="0"
-                        allowfullscreen></iframe>
-                    <h3>Female Legs Workout Tutorial</h3>
-                </div>
-            </div>
-            <div class="row" id="noResults" style="display: none;">
-                <div class="col-lg-12">
-                    <p style="text-align: center; font-size: 18px; color: red;">Video not found</p>
+            <div class="col-lg-6 workout-description">
+                <h2>Full Body Workout</h2>
+                <p>This workout includes exercises for all major muscle groups. It's designed to help you build strength and endurance in a balanced way.</p>
+                <h3>Workout Benefits:</h3>
+                <ul style="list-style-type: disc; padding-left: 0px;">
+                    <li>Targets all major muscle groups</li>
+                    <li>Improves overall strength and endurance</li>
+                    <li>Burns fat and increases metabolism</li>
+                    <li>Improves posture and body mechanics</li>
+                    <li>Can be done at home with minimal equipment</li>
+                </ul>
+                <h3>How to Perform Each Exercise:</h3>
+                <div class="workout-instructions">
+                    <ul style="list-style-type: circle; padding-left: 0px;">
+                        <li><strong>Squats</strong>: Stand with your feet shoulder-width apart. Lower your body as if sitting back into a chair, keeping your knees behind your toes. Push through your heels to return to standing.</li>
+                        <li><strong>Push-ups</strong>: Start in a plank position with hands placed slightly wider than shoulder-width. Lower your body until your chest almost touches the floor, then push back up.</li>
+                        <li><strong>Plank</strong>: Lie face down, then lift your body off the floor, balancing on your toes and forearms. Keep your body in a straight line, holding the position for as long as possible.</li>
+                        <li><strong>Lunges</strong>: Step forward with one foot and lower your body until both knees are bent at 90-degree angles. Push off the front foot to return to the starting position.</li>
+                        <li><strong>Jumping Jacks</strong>: Stand with feet together and arms at your sides. Jump your feet out while raising your arms above your head, then return to the starting position.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Video Tutorial Section End -->
+    </div>
+</section>
+<!-- Workout Detail Section End -->
+
 
     <!-- Get In Touch Section Begin -->
     <div class="gettouch-section">
@@ -248,25 +243,25 @@
     <!-- Get In Touch Section End -->
 
     <!-- Footer Section Begin -->
-    <section class="footer-section">
+    <footer class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6">
                     <div class="fs-about">
                         <div class="fa-logo">
                             <a href="#"><img src="img/logo.png" alt=""></a>
                         </div>
-                        <p></p>
+                        <p>We aim to provide our clients with the most comprehensive and up-to-date physical fitness and
+                            nutrition programs. Join us and start your journey to a healthier life today!</p>
                         <div class="fa-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="col-lg-2 col-sm-6">
                     <div class="fs-widget">
                         <h4>Useful links</h4>
                         <ul>
@@ -277,7 +272,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="col-lg-2 col-sm-6">
                     <div class="fs-widget">
                         <h4>Support</h4>
                         <ul>
@@ -288,28 +283,30 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-2 col-sm-6">
                     <div class="fs-widget">
-                        <h4>Tips & Guides</h4>
-                        <div class="fw-recent">
-                            <h6><a href="#">Physical fitness may help prevent depression, anxiety</a></h6>
-                            <ul>
-                                <li>3 min read</li>
-                                <li>20 Comment</li>
-                            </ul>
-                        </div>
-                        <div class="fw-recent">
-                            <h6><a href="#">Fitness: The best exercise to lose belly fat and tone up...</a></h6>
-                            <ul>
-                                <li>3 min read</li>
-                                <li>20 Comment</li>
-                            </ul>
-                        </div>
+                        <h4>Popular</h4>
+                        <ul>
+                            <li><a href="#">Gym</a></li>
+                            <li><a href="#">Crossfit</a></li>
+                            <li><a href="#">Cardio</a></li>
+                            <li><a href="#">Zumba</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                        <form action="#" class="subscribe-form">
+                            <input type="text" placeholder="Email address">
+                            <button type="submit"><i class="fa fa-send"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
     <!-- Footer Section End -->
 
     <!-- Search model Begin -->
@@ -332,30 +329,6 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        function filterVideos() {
-            let input = document.getElementById('searchBar').value.toLowerCase();
-            let videoItems = document.getElementsByClassName('video-item');
-            let noResults = document.getElementById('noResults');
-            let videoFound = false;
-
-            for (let i = 0; i < videoItems.length; i++) {
-                let videoTitle = videoItems[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-                if (videoTitle.includes(input)) {
-                    videoItems[i].style.display = "";
-                    videoFound = true;
-                } else {
-                    videoItems[i].style.display = "none";
-                }
-            }
-
-            if (videoFound) {
-                noResults.style.display = "none";
-            } else {
-                noResults.style.display = "block";
-            }
-        }
-    </script>
 </body>
 
 </html>

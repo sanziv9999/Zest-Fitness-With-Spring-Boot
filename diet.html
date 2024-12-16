@@ -7,8 +7,8 @@
     <meta name="keywords" content="Gym, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zest Fitness</title>
-
+    <title>Zest Fitness - Diet</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
@@ -23,21 +23,49 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
-        #searchBar {
-            width: 100%;
-            max-width: 500px;
-            padding: 10px 15px;
-            margin: 20px 0;
-            font-size: 16px;
-            border: 1px solid #ccc;
+        .workout-item {
+            border: 1px solid #ddd;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
         }
 
-        form {
+        .workout-item h4 {
+            margin-bottom: 10px;
+        }
+
+        .card-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            flex-grow: 1;
+            margin-bottom: 8px;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
         }
     </style>
 </head>
@@ -144,13 +172,13 @@
     <!-- Hero Section Begin -->
     <section class="hero-section">
         <div class="hs-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="img/hero/hero-1.jpg">
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-2.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-6">
                             <div class="hi-text">
-                                <span>Shape your body</span>
-                                <h1><strong>Video Tutorials</strong></h1>
+                                <span>Plan your body</span>
+                                <h1><strong>Diets</strong></h1>
                             </div>
                         </div>
                     </div>
@@ -161,9 +189,8 @@
                     <div class="row">
                         <div class="col-lg-6 offset-lg-6">
                             <div class="hi-text">
-                                <span>Shape your body</span>
-                                <h1>Be <strong>strong</strong> traning hard</h1>
-                                <a href="#" class="primary-btn">Get info</a>
+                                <span>Plan your body</span>
+                                <h1><strong>Diets</strong></h1>
                             </div>
                         </div>
                     </div>
@@ -173,49 +200,72 @@
     </section>
     <!-- Hero Section End -->
 
-    <!-- Video Tutorial Section Begin -->
-    <section class="video-tutorial-section spad">
+    <!-- Workout Section Begin -->
+    <section class="workout-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Learn with us</span>
-                        <h2 style="color: black;">VIDEO TUTORIAL</h2>
+                        <h2 style="color: black;">Diet Plans</h2>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form onsubmit="return false;">
-                        <input type="text" id="searchBar" placeholder="Search for videos..." onkeyup="filterVideos()">
-                    </form>
-                </div>
-            </div>
-            <div class="row" id="videoContainer">
-                <div class="col-md-4 video-item">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/Z_dgrjRlD_4" frameborder="0"
-                        allowfullscreen></iframe>
-                    <h3>Female Abs Workout Tutorial</h3>
-                </div>
-                <div class="col-md-4 video-item">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/z0eulElSJK0" frameborder="0"
-                        allowfullscreen></iframe>
-                    <h3>Female Biceps Workout Tutorial</h3>
-                </div>
-                <div class="col-md-4 video-item">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/FJA3R7n_594" frameborder="0"
-                        allowfullscreen></iframe>
-                    <h3>Female Legs Workout Tutorial</h3>
-                </div>
-            </div>
-            <div class="row" id="noResults" style="display: none;">
-                <div class="col-lg-12">
-                    <p style="text-align: center; font-size: 18px; color: red;">Video not found</p>
+                    <div class="row">
+                        <!-- First Card -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="img/delicious/1.png" class="card-img-top" alt="Full Body Workout">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">Full Body Workout</h5>
+                                        <!-- Bookmark icon on the right -->
+                                        <button class="btn btn-link bookmark-btn" onclick="toggleBookmark(this)">
+                                            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <p class="card-text">This workout includes exercises for all major muscle groups.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Card -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="/img/delicious/2.png"
+                                    class="card-img-top" alt="Cardio Routine">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">Cardio Routine</h5>
+                                        <!-- Bookmark icon on the right -->
+                                        <button class="btn btn-link bookmark-btn" onclick="toggleBookmark(this)">
+                                            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <p class="card-text">A high-intensity cardio routine to burn calories.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Card -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="img/delicious/3.png"
+                                    class="card-img-top" alt="Strength Training">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title">Strength Training</h5>
+                                        <!-- Bookmark icon on the right -->
+                                        <button class="btn btn-link bookmark-btn" onclick="toggleBookmark(this)">
+                                            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <p class="card-text">Build muscle strength with this comprehensive workout.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Video Tutorial Section End -->
+    <!-- Workout Section End -->
 
     <!-- Get In Touch Section Begin -->
     <div class="gettouch-section">
@@ -248,25 +298,25 @@
     <!-- Get In Touch Section End -->
 
     <!-- Footer Section Begin -->
-    <section class="footer-section">
+    <footer class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-sm-6">
                     <div class="fs-about">
                         <div class="fa-logo">
                             <a href="#"><img src="img/logo.png" alt=""></a>
                         </div>
-                        <p></p>
+                        <p>We aim to provide our clients with the most comprehensive and up-to-date physical fitness and
+                            nutrition programs. Join us and start your journey to a healthier life today!</p>
                         <div class="fa-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa  fa-envelope-o"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="col-lg-2 col-sm-6">
                     <div class="fs-widget">
                         <h4>Useful links</h4>
                         <ul>
@@ -277,7 +327,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="col-lg-2 col-sm-6">
                     <div class="fs-widget">
                         <h4>Support</h4>
                         <ul>
@@ -288,28 +338,30 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-2 col-sm-6">
                     <div class="fs-widget">
-                        <h4>Tips & Guides</h4>
-                        <div class="fw-recent">
-                            <h6><a href="#">Physical fitness may help prevent depression, anxiety</a></h6>
-                            <ul>
-                                <li>3 min read</li>
-                                <li>20 Comment</li>
-                            </ul>
-                        </div>
-                        <div class="fw-recent">
-                            <h6><a href="#">Fitness: The best exercise to lose belly fat and tone up...</a></h6>
-                            <ul>
-                                <li>3 min read</li>
-                                <li>20 Comment</li>
-                            </ul>
-                        </div>
+                        <h4>Popular</h4>
+                        <ul>
+                            <li><a href="#">Gym</a></li>
+                            <li><a href="#">Crossfit</a></li>
+                            <li><a href="#">Cardio</a></li>
+                            <li><a href="#">Zumba</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                        <form action="#" class="subscribe-form">
+                            <input type="text" placeholder="Email address">
+                            <button type="submit"><i class="fa fa-send"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
     <!-- Footer Section End -->
 
     <!-- Search model Begin -->
@@ -332,30 +384,6 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        function filterVideos() {
-            let input = document.getElementById('searchBar').value.toLowerCase();
-            let videoItems = document.getElementsByClassName('video-item');
-            let noResults = document.getElementById('noResults');
-            let videoFound = false;
-
-            for (let i = 0; i < videoItems.length; i++) {
-                let videoTitle = videoItems[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-                if (videoTitle.includes(input)) {
-                    videoItems[i].style.display = "";
-                    videoFound = true;
-                } else {
-                    videoItems[i].style.display = "none";
-                }
-            }
-
-            if (videoFound) {
-                noResults.style.display = "none";
-            } else {
-                noResults.style.display = "block";
-            }
-        }
-    </script>
 </body>
 
 </html>
